@@ -25,7 +25,7 @@ request({url : geturl , json : true} , (err , res)=>{
         cb( res.body.error.type , null)
     }
     else{
-        cb(null , `${res.body.request.query} -- temp is ${res.body.current.temperature}` )
+        cb(null , `${res.body.request.query} -- status is ${res.body.current.weather_descriptions[0]} -- temp is ${res.body.current.temperature}` )
     }
 })
 }
